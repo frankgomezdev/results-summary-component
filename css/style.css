@@ -26,7 +26,7 @@
 
 body {
     min-height: 100vh;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 1.125rem;
 }
@@ -38,7 +38,7 @@ h1 {
 
 .main-card {
     width: 100%;
-    border: 1px red solid;
+    /* border: 1px red solid; */
 }
 
 /* Top/Left Card*/
@@ -49,8 +49,8 @@ h1 {
     text-align: center;
     font-size: 0.875rem;
     padding: 20px 40px;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
 .result {
@@ -58,8 +58,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 140px;
-    width: 140px;
+    height: 150px;
+    width: 150px;
     margin-inline: auto;
     border-radius: 50%;
     background: var(--circle-gradient);
@@ -86,7 +86,7 @@ h1 {
 
 /* Bottom/Right Card */
 
-h2 {
+h3 {
     color: var(--Dark-Gray-Blue);
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -94,7 +94,7 @@ h2 {
 
 .right-card {
     padding: 0rem 1.875rem;
-    border: 1px black solid;
+    /* border: 1px black solid; */
 }
 
 .summary-box {
@@ -102,7 +102,7 @@ h2 {
     justify-content: space-between;
     margin: 1rem 0;
     padding: 1rem;
-    border-radius: 12px;
+    border-radius: 10px;
     color: var(--Dark-Gray-Blue);
 }
 
@@ -120,6 +120,7 @@ h2 {
 
 .first-value {
     color: var(--Dark-Gray-Blue);
+    margin-left: 8rem;
 }
 
 .second-value {
@@ -127,8 +128,9 @@ h2 {
 }
 
 .button {
+    position: relative;
     width: 100%;
-    padding: 1.4rem 1rem;
+    padding: 1.3rem 1rem;
     border: none;
     border-radius: 40px;
     font-size: 1.1rem;
@@ -136,6 +138,17 @@ h2 {
     background: var(--Dark-Gray-Blue);
     color:var(--Pale-Blue);
     letter-spacing: 2px;
+}
+
+.button:hover {
+    background: var(--card-gradient);
+    transition: 1.5s;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
 /* Colors */
@@ -170,4 +183,48 @@ h2 {
 
 .blue-text {
     color: var(--Cobalt-Blue);
+}
+
+/* desktop */
+
+@media only screen and (min-width: 768px) {
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-card {
+        display: flex;
+        max-width: 768px;
+        width: 90%;
+    }
+
+    .right-card {
+        width: 50%;
+    }
+
+    .left-card {
+        width: 50%;
+        border-radius: 25px;
+    }
+
+    .result {
+        width: 200px;
+        height: 200px;
+    }
+
+    .button {
+        margin-bottom: 2rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .rate {
+        font-size: 2rem;
+    }
 }
